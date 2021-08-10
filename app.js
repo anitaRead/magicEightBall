@@ -7,6 +7,9 @@ let ejs = require('ejs');
 
 app.set('view engine', 'ejs');
 
+// Static Files
+app.use(express.static('public'));
+
 app.get('/', (req, res) => {
   res.render('index');
 })
