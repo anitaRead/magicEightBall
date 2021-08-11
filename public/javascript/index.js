@@ -1,10 +1,11 @@
 let response = document.querySelector(".response");
+let askButton = document.querySelector(".ask-button");
 
-response.addEventListener("click", () => {
+askButton.addEventListener("click", () => {
     let randomNumber = Math.floor(Math.random() * 8);
 
     let eightBall = '';
-
+    
     switch (randomNumber) {
     case 0:
         eightBall = 'Signs point to yes';
@@ -34,6 +35,5 @@ response.addEventListener("click", () => {
         console.log('Error, something went wrong!');
         break;
     }
-
     response.innerHTML = eightBall;
 })
